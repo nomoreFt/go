@@ -6,7 +6,7 @@ import (
 	"os"
 )
 
-func copyFile(srcFileNm, destFileNm string, c chan string) {
+func CopyFile(srcFileNm, destFileNm string, c chan string) {
 	fin, err := os.Open(srcFileNm)
 	if err != nil {
 		log.Fatal(err)
@@ -26,7 +26,7 @@ func copyFile(srcFileNm, destFileNm string, c chan string) {
 	}
 	c <- srcFileNm + " is copied"
 }
-func moveFile(fileNm string, srcDir string, destDir string, c chan string) {
+func MoveFile(fileNm string, srcDir string, destDir string, c chan string) {
 
 	oldLocation := srcDir + "/" + fileNm
 	newLocation := destDir + "/" + fileNm
