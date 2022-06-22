@@ -19,7 +19,7 @@ func main() {
 	for _, file := range files {
 		//go moveFile(file.Name(), srcDir, destDir, c)
 		file.Name()
-		go copyFile(srcDir+"/"+file.Name(), destDir+"/"+file.Name(), c)
+		go fileControl.copyFile(srcDir+"/"+file.Name(), destDir+"/"+file.Name(), c)
 
 	}
 	for i := 0; i < len(files); i++ {
