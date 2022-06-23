@@ -7,6 +7,7 @@ import (
 )
 
 func CopyFile(srcFileNm, destFileNm string, c chan string) {
+
 	fin, err := os.Open(srcFileNm)
 	if err != nil {
 		log.Fatal(err)
